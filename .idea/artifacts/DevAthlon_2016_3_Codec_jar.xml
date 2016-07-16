@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="DevAthlon-2016-3-Codec:jar">
+    <output-path>$USER_HOME$/Desktop/CloudSystem/Devathlon-Server/plugins</output-path>
+    <root id="archive" name="DevAthlon-2016-3-Codec.jar">
+      <element id="module-output" name="DevAthlon-2016-3-Codec" />
+    </root>
+  </artifact>
+</component>

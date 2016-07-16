@@ -1,0 +1,5 @@
+name: Magic
+author: Codec
+version: 0.1b
+
+main: net.codec.magic.Magic
