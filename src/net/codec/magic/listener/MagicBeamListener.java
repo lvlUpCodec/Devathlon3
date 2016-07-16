@@ -1,9 +1,11 @@
 package net.codec.magic.listener;
 
 import com.sun.media.jfxmedia.logging.Logger;
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
@@ -29,6 +31,10 @@ public class MagicBeamListener implements Listener{
                 for(double i = 0.5; i < 20; i+=0.5) // bei 1 anfange ist extrem wichtig
                 {
                     Location spawnLoc = e.getPlayer().getLocation().add(vec.normalize().multiply(i)); // later implement length of this combined with the time
+                    for(Player all : Bukkit.getOnlinePlayers())
+                    {
+                        if(all.getLocation().distance(spawnLoc) <= 0.9)all.setHealth( all.getHealth() / 2);
+                    }
                     e.getPlayer().spawnParticle(Particle.WATER_DROP, spawnLoc, 1);
                 }
             }
