@@ -36,6 +36,7 @@ public class MagicBeamListener implements Listener{
                         if(all.getLocation().distance(spawnLoc) <= 0.9)all.setHealth( all.getHealth() / 2);
                     }
                     e.getPlayer().spawnParticle(Particle.WATER_DROP, spawnLoc, 1);
+                    //TEST
                 }
             }
         }
